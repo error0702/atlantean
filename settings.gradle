@@ -1,3 +1,4 @@
 rootProject.name = 'atlantean'
 include 'atlantean-common'
+include 'atlantean-agent'
 
