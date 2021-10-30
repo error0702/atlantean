@@ -7,7 +7,6 @@ group 'com.atlantean'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
     maven {
         url "https://maven.aliyun.com/repository/public"
     }
@@ -24,4 +23,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+task showRepos {
+    doLast {
+        repositories.each {
+            println "repository: ${it.name} ('${it.url}')"
+        }
+    }
 }
