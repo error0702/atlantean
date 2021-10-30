@@ -8,6 +8,9 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://maven.aliyun.com/repository/public"
+    }
 }
 
 dependencies {
@@ -15,7 +18,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation group: 'com.google.guava', name: 'guava', version: '31.0.1-jre'
-    
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+
 }
 
 test {
