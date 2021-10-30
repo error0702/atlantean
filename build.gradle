@@ -3,7 +3,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'com.atlantean'
 version '1.0-SNAPSHOT'
 
 repositories {
