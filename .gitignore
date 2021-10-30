@@ -1,0 +1,40 @@
+*.java.hsp
+*.sonarj
+*.sw*
+.DS_Store
+.settings
+bin
+build.sh
+integration-repo
+ivy-cache
+jxl.log
+jmx.log
+derby.log
+atlantean-test/test-output/
+.gradle
+argfile*
+pom.xml
+
+classes/
+/build
+buildSrc/build
+/atlantean-*/build
+target/
+
+# Eclipse artifacts, including WTP generated manifests
+.classpath
+.project
+atlantean*/src/main/java/META-INF/MANIFEST.MF
+
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+.idea
+out
+test-output
+atlassian-ide-plugin.xml
+.gradletasknamecache
+
+# VS Code
+.vscode/
