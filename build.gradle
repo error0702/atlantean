@@ -24,11 +24,3 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
-task showRepos {
-    doLast {
-        repositories.each {
-            println "repository: ${it.name} ('${it.url}')"
-        }
-    }
-}
