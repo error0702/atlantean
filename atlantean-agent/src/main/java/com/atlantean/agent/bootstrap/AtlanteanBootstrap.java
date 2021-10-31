@@ -15,8 +15,10 @@ package com.atlantean.agent.bootstrap;
 
 
 import com.atlantean.common.task.FileMonitorTask;
+import com.atlantean.common.task.concurrent.FileMonitorThreadFactory;
 
 import java.lang.instrument.Instrumentation;
+import java.util.concurrent.*;
 
 /**
  * agent启动类, 用于注入进程
@@ -37,17 +39,17 @@ public class AtlanteanBootstrap {
 
 	private void registorFileMonitorTask() {
 		FileMonitorTask fileMonitorTask = new FileMonitorTask();
-		Thread task = new Thread(fileMonitorTask);
-		task.setDaemon(true);
-
-		task.start();
+		ThreadFactory factory = new FileMonitorThreadFactory();
+		factory.newThread(fileMonitorTask);
+		ExecutorService service = new ThreadPoolExecutor(1, 1,
+				0L, TimeUnit.MILLISECONDS,
+				new LinkedBlockingQueue<Runnable>(), factory);
+		service.submit(fileMonitorTask);
 		try {
-			Thread.sleep(1000L);
+			Thread.currentThread().wait(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		fileMonitorTask.setRunning(false);
 	}
-
-
 }

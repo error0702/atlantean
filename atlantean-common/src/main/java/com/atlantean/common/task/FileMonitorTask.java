@@ -13,6 +13,8 @@
 
 package com.atlantean.common.task;
 
+import java.util.concurrent.atomic.LongAdder;
+
 /**
  * @author Autorun
  * @date 2021/10/30 17:00
@@ -20,6 +22,12 @@ package com.atlantean.common.task;
 public class FileMonitorTask implements Runnable {
 
 	private boolean running;
+
+	LongAdder longAdder = new LongAdder();
+
+	public LongAdder getLongAdder() {
+		return longAdder;
+	}
 
 	public synchronized void setRunning(boolean running) {
 		this.running = running;
