@@ -30,7 +30,7 @@ public class FileMonitorTask implements Runnable {
 		running = true;
 		while (running) {
 			try {
-				Thread.sleep(100L);
+				Thread.currentThread().wait(100L);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
