@@ -40,7 +40,6 @@ public class AtlanteanBootstrap {
 	private void registorFileMonitorTask() {
 		FileMonitorTask fileMonitorTask = new FileMonitorTask();
 		ThreadFactory factory = new FileMonitorThreadFactory();
-		factory.newThread(fileMonitorTask);
 		ExecutorService service = new ThreadPoolExecutor(1, 1,
 				0L, TimeUnit.MILLISECONDS,
 				new LinkedBlockingQueue<Runnable>(), factory);

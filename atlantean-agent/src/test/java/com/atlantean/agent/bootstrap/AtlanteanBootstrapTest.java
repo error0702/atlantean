@@ -20,5 +20,4 @@ package com.atlantean.agent.bootstrap;
 public class AtlanteanBootstrapTest {
 
 
-
 }
