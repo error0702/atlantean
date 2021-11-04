@@ -60,4 +60,17 @@ public class OsUtilsTest {
 			Assertions.assertTrue(OSUtils.isMac(), "check OS macOS fail! ");
 		}
 	}
+
+
+	@Test
+	public void linuxTest() {
+		OSUtils.PlatformEnum platform = getOsPlatform();
+		if (platform == null) {
+			return;
+		}
+
+		if (platform.equals(OSUtils.PlatformEnum.LINUX)) {
+			Assertions.assertTrue(OSUtils.isLinux(), "check OS macOS fail! ");
+		}
+	}
 }
