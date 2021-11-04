@@ -48,4 +48,16 @@ public class OsUtilsTest {
 		}
 	}
 
+
+	@Test
+	public void macOSTest() {
+		OSUtils.PlatformEnum platform = getOsPlatform();
+		if (platform == null) {
+			return;
+		}
+
+		if (platform.equals(OSUtils.PlatformEnum.MACOSX)) {
+			Assertions.assertTrue(OSUtils.isMac(), "check OS macOS fail! ");
+		}
+	}
 }
