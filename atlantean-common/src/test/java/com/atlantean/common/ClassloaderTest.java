@@ -26,9 +26,10 @@ import org.junit.jupiter.api.Test;
 public class ClassloaderTest {
 
 	@Test
-	public void classLoaderTest() throws MalformedURLException, ClassNotFoundException {
+	public void classLoaderTest() throws MalformedURLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		AtlanteanClassLoader classLoader = new AtlanteanClassLoader(new URL[]{new URL("com.atlantean.common.TestClass.class")});
 		Class<?> clazz = classLoader.loadClass("com.atlantean.common.TestClass.class");
+		Object o = clazz.newInstance();
 		Assertions.assertNotNull(clazz);
 	}
 }
