@@ -46,6 +46,7 @@ public class OsUtilsTest {
 		if (platform.equals(OSUtils.PlatformEnum.WINDOWS)) {
 			Assertions.assertTrue(OSUtils.isWindows(), "check OS windows fail! ");
 		}
+
 	}
 
 
