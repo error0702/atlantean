@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.LongAdder;
  */
 public class FileMonitorThreadFactory implements ThreadFactory {
 
-	LongAdder longAdder = new LongAdder();
+	private LongAdder longAdder = new LongAdder();
 
 	@Override
 	public Thread newThread(Runnable r) {
