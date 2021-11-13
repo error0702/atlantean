@@ -45,7 +45,7 @@ public class AtlanteanBootstrap {
 				new LinkedBlockingQueue<Runnable>(), factory);
 		service.submit(fileMonitorTask);
 		try {
-			Thread.currentThread().wait(1000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
