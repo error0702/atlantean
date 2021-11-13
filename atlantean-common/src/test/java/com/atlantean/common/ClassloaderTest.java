@@ -30,6 +30,8 @@ public class ClassloaderTest {
 		AtlanteanClassLoader classLoader = new AtlanteanClassLoader(new URL[]{new URL("com.atlantean.common.TestClass.class")});
 		Class<?> clazz = classLoader.loadClass("com.atlantean.common.TestClass.class");
 		Object o = clazz.newInstance();
+		System.out.println(o.hashCode());
+//
 		Assertions.assertNotNull(clazz);
 	}
 }
