@@ -29,7 +29,7 @@ import java.util.concurrent.*;
 public class AtlanteanBootstrap {
 
 	public static void premain(String args, Instrumentation inst) {
-//		System.out.println("premain call" + args + ", " + inst.isRetransformClassesSupported());
+		System.out.println("premain call" + args + ", " + inst.isRetransformClassesSupported());
 		AtlanteanBootstrap bootstrap = new AtlanteanBootstrap();
 		bootstrap.registorFileMonitorTask();
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> System.out.println(Thread.currentThread().getName() + " 模拟销毁fileMonitorTask")));
