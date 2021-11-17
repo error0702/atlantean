@@ -31,7 +31,7 @@ public class ClassloaderTest {
 		Class<?> clazz = classLoader.loadClass("com.atlantean.common.TestClass.class");
 		Object o = clazz.newInstance();
 		System.out.println(o.hashCode());
-//
+//		sout
 		Assertions.assertNotNull(clazz);
 	}
 }
