@@ -32,7 +32,7 @@ public class ClassloaderTest {
 		Object o = clazz.newInstance();
 		System.out.println(o.hashCode());
 //		sout
-//		System.out.println(o.getClass());
+		System.out.println(o.getClass());
 		Assertions.assertNotNull(clazz);
 	}
 }
