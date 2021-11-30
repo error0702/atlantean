@@ -28,6 +28,9 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation group: 'com.google.guava', name: 'guava', version: '31.0.1-jre'
     implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    // https://mvnrepository.com/artifact/org.openjdk.jol/jol-core
+    compileOnly group: 'org.openjdk.jol', name: 'jol-core', version: '0.16'
+
 }
 
 apply plugin: 'io.spring.javaformat'
