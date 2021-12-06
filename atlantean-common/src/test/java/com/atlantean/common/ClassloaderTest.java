@@ -33,6 +33,5 @@ public class ClassloaderTest {
 		System.out.println(o.getClass());
 		// sout
 		Assertions.assertNotNull(clazz);
-		Assertions.assertNotNull(clazz);
 	}
 }
