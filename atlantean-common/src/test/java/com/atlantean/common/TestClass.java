@@ -13,9 +13,16 @@
 
 package com.atlantean.common;
 
+import org.junit.jupiter.api.Test;
+
 /**
  * @author Autorun
  * @date 2021/11/2 11:15
  */
 public class TestClass {
+
+	@Test
+	public void test() {
+
+	}
 }
